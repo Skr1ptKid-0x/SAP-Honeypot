@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Threat Intelligence Dashboard</title>
+    <style>
+        body { background-color: #1e1e1e; color: #00ff00; font-family: 'Courier New', monospace; padding: 20px; }
+        h1 { border-bottom: 1px solid #00ff00; padding-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #333; padding: 10px; text-align: left; font-size: 13px; }
+        th { background-color: #333; color: white; }
+        tr:nth-child(even) { background-color: #252525; }
+        tr:hover { background-color: #333; color: #fff; }
+        .highlight { color: #ff4444; }
+    </style>
+</head>
+<body>
+    <h1>[SAP HONEYPOT] Threat Intelligence Feed</h1>
+    <p>Monitoring Port 5000 | Live Attack Data</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Timestamp</th>
+                <th>Source IP</th>
+                <th>Captured Username</th>
+                <th>Captured Password</th>
+                <th>User Agent</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log['id'] }}</td>
+                <td>{{ log['timestamp'] }}</td>
+                <td class="highlight">{{ log['ip_address'] }}</td>
+                <td>{{ log['username'] }}</td>
+                <td class="highlight">{{ log['password'] }}</td>
+                <td>{{ log['user_agent'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

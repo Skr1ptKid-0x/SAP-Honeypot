@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SAP NetWeaver Application Server</title>
+    <style>
+        body {
+            background-color: #eef3f8;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: white;
+            width: 380px;
+            padding: 30px;
+            border: 1px solid #d1d1d1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #f0ab00; /* SAP Gold Color */
+        }
+        .sap-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #008fd3; /* SAP Blue */
+            margin-bottom: 20px;
+            display: block;
+        }
+        label {
+            font-size: 12px;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"] {
+            width: 95%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            font-size: 14px;
+        }
+        button {
+            background-color: #f0ab00;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #d99a00;
+        }
+        .error-msg {
+            color: #cc0000;
+            font-size: 12px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <span class="sap-logo">SAP NetWeaver</span>
+        
+        <form method="POST">
+            {% if error %}
+                <span class="error-msg">{{ error }}</span>
+            {% endif %}
+            
+            <label for="sap-user">User *</label>
+            <input type="text" id="sap-user" name="sap-user" required autocomplete="off">
+            
+            <label for="sap-password">Password *</label>
+            <input type="password" id="sap-password" name="sap-password" required>
+            
+            <button type="submit">Log On</button>
+        </form>
+
+        <div class="footer">
+            Copyright © SAP SE. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
