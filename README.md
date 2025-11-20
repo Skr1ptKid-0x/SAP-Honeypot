@@ -29,4 +29,8 @@ Access the trap at: http://localhost:8080
 View captured attacks at: http://localhost:8080/admin_dashboard
 
 ## 👨‍💻 Author
-Osman Kaan Kars | Cybersecurity Engineer
+**Osman Kaan Kars**  
+Cybersecurity Engineer | SAP Security Specialist  
+
+**LinkedIn:** https://linkedin.com/in/osmankaankars  
+**GitHub:** https://github.com/osmankaankars
