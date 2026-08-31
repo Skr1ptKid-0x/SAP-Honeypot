@@ -16,7 +16,7 @@
 </head>
 <body>
     <h1>[SAP HONEYPOT] Threat Intelligence Feed</h1>
-    <p>Monitoring Port 5000 | Live Attack Data</p>
+    <p>Monitoring Port 8080 | Recorded Event Metadata</p>
     
     <table>
         <thead>
@@ -24,8 +24,8 @@
                 <th>ID</th>
                 <th>Timestamp</th>
                 <th>Source IP</th>
-                <th>Captured Username</th>
-                <th>Captured Password</th>
+                <th>Username Supplied</th>
+                <th>Password Supplied</th>
                 <th>User Agent</th>
             </tr>
         </thead>
@@ -35,8 +35,8 @@
                 <td>{{ log['id'] }}</td>
                 <td>{{ log['timestamp'] }}</td>
                 <td class="highlight">{{ log['ip_address'] }}</td>
-                <td>{{ log['username'] }}</td>
-                <td class="highlight">{{ log['password'] }}</td>
+                <td>{{ 'yes' if log['username_supplied'] else 'no' }}</td>
+                <td>{{ 'yes' if log['password_supplied'] else 'no' }}</td>
                 <td>{{ log['user_agent'] }}</td>
             </tr>
             {% endfor %}
