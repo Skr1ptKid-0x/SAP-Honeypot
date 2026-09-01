@@ -2,7 +2,7 @@
 
 > A small Flask proof of concept for studying login activity in an isolated, authorized lab.
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Docker](https://img.shields.io/badge/Docker-Container-2496ED)
 ![Security](https://img.shields.io/badge/Focus-Deception_Technology-orange)
 ![CI](https://github.com/osmankaankars/SAP-Honeypot/actions/workflows/ci.yml/badge.svg)
@@ -75,7 +75,3 @@ This repository is a learning PoC, not a production honeypot or an SAP product. 
 - IP addresses and User-Agent strings can still be personal or sensitive data. Define retention, access, and deletion policies appropriate to your jurisdiction.
 - A bearer token is only a baseline dashboard control. For a real deployment, place the dashboard behind a separate identity-aware reverse proxy and network allowlist.
 - The interface is a visual simulation; it does not emulate SAP protocols or validate resistance to real attackers.
-
-## Author
-
-Osman Kaan Kars — Senior Cybersecurity Engineer at SchutzOn
